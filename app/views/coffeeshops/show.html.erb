@@ -1,0 +1,7 @@
+<h2>Coffeeshop Information</h2>
+<% @coffeeshops.each do |coffeeshop| %>
+<h3><%= coffeeshop.name %></h3>
+<p>Capacity: <%= coffeeshop.capacity %></p>
+<p>Outdoor Seating: <%= coffeeshop.outdoor_seating %></p>
+<% end %>
+
