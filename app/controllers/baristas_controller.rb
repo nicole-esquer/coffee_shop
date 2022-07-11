@@ -4,5 +4,6 @@ class BaristasController < ApplicationController
    end
 
    def show
+      @barista = Barista.find(params[:id])
    end
 end
