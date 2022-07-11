@@ -1,0 +1,6 @@
+<h2>Barista Information</h2>
+<% @baristas.each do |barista| %>
+<h3><%= barista.name %></h3>
+<p>Full Time?: <%= barista.full_time %></p>
+<p>Hours Worked: <%= barista.hours_worked %></p>
+<% end %>

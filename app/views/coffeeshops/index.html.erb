@@ -1,6 +1,5 @@
 <h1>Coffeeshops</h1>
 <% @coffeeshops.each do |coffeeshop| %>
-<h3><p><%= coffeeshop.name %></p></h3>
-<p>Capacity: <%= coffeeshop.capacity %></p>
-<p>Outdoor Seating: <%= coffeeshop.outdoor_seating %></p>
+<div class="div"><h3><a href="/coffeeshops/<%= coffeeshop.id%>"><%= coffeeshop.name%></a></h3>
+	<p>Created: <%= coffeeshop.created_at.strftime("%m/%d/%Y %I:%M %p")%></p>
 <% end %>
