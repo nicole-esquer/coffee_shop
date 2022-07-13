@@ -1,0 +1,9 @@
+<form action="/coffeeshops/<%= @coffeeshop.id%>" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+	<input type="hidden" name="_method" value="PATCH"/>
+	<p>Editing <%=@coffeeshop.name %></p>
+	Name: <input type='text' name='coffeeshop[name]' value="<%= @coffeeshop.name%>"/><br/>
+   Outdoor Seating?: <input type='checkbox' name='coffeeshop[outdoor_seating]' value="<%= @coffeeshop.outdoor_seating%>"/><br/>
+   Capacity: <input type='number' name='coffeeshop[capacity]' value="<%= @coffeeshop.capacity%>"/><br/>
+  <input type="submit" value="Update Coffeeshop"/>
+</form>

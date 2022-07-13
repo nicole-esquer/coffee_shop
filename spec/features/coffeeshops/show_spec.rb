@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'when user visits the coffeeshop index', type: :feature do
-   it 'displays all information for selected coffeeshop' do
+   xit 'displays all information for selected coffeeshop' do
       Coffeeshop.destroy_all
 
       coffeeshop_1 = Coffeeshop.create( name: 'Cafe Olay',

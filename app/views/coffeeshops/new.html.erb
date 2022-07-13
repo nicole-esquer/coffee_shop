@@ -1,0 +1,8 @@
+<form action="/coffeeshops" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Enter a new coffeeshop:</p>
+  Name: <input type='text' name='coffeeshop[name]'/><br/>
+  Outdoor Seating?<input type='checkbox' name='coffeeshop[outdoor_seating]'/><br/>
+  Capacity: <input type='number' name='coffeeshop[capacity]'/><br/>
+  <input type='submit' value="Create Coffeeshop"/>
+</form>
