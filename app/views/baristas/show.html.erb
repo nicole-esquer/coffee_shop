@@ -1,6 +1,8 @@
-<h2>Barista Information</h2>
+<a href="/baristas">Back to index</a>
 <% @baristas.each do |barista| %>
 <h3><%= barista.name %></h3>
 <p>Full Time?: <%= barista.full_time %></p>
 <p>Hours Worked: <%= barista.hours_worked %></p>
+<a href="/baristas/<%= @barista.id%>/edit">Edit</a>
+<%= link_to 'delete', "/baristas/#{@barista.id}", method: :delete %>
 <% end %>

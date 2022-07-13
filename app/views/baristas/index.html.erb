@@ -1,7 +1,10 @@
 <h1>All Baristas</h1>
 
 <% @baristas.each do |barista| %>
-	<div class="div"><h3><a href="/baristas/<%= barista.id%>"><%= barista.name%></a></h3>
-	<p>Full time: <%= barista.full_time%></p>
+	<h3><a href="/baristas/<%= barista.id%>"><%= barista.name%></a></h3>
+	<p>Full time?: <%= barista.full_time%></p>
 	<p>Hours Worked: <%= barista.hours_worked%></p>
+	<p>Coffeeshop ID: <%= barista.coffeeshop_id%></p>
+	<a href="/baristas/<%= barista.id %>/edit">Edit <%= barista.name  %></a><br><br>
+	<%= button_to "Delete #{barista.name}", "/baristas/#{barista.id}", method: :delete %>
 <% end %>
