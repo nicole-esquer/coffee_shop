@@ -1,2 +1,2 @@
 ## Database Design Document
-![Database Design Document](https://user-images.githubusercontent.com/98506079/177661603-74d98721-79b8-45d8-93c0-cc6d206be659.png)
+![Database Design Document](https://user-images.githubusercontent.com/98506079/178851773-150a6052-b91c-495a-913d-370c8484ff1f.png)

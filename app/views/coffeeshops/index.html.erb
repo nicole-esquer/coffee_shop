@@ -2,4 +2,6 @@
 <% @coffeeshops.each do |coffeeshop| %>
 <div class="div"><h3><a href="/coffeeshops/<%= coffeeshop.id%>"><%= coffeeshop.name%></a></h3>
 	<p>Created: <%= coffeeshop.created_at.strftime("%m/%d/%Y %I:%M %p")%></p>
+	<a href="/coffeeshops/<%= coffeeshop.id%>/edit">Edit <%= coffeeshop.name  %></a><br><br>
+	<%= button_to "Delete #{coffeeshop.name}", "/coffeeshops/#{coffeeshop.id}", method: :delete %></div>
 <% end %>

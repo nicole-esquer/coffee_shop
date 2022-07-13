@@ -1,7 +1,8 @@
-<h2>Coffeeshop Information</h2>
-<% @coffeeshops.each do |coffeeshop| %>
-<h3><%= coffeeshop.name %></h3>
-<p>Capacity: <%= coffeeshop.capacity %></p>
-<p>Outdoor Seating: <%= coffeeshop.outdoor_seating %></p>
-<% end %>
-
+<a href="/coffeeshops/<%= @coffeeshop.id%>/baristas">Coffeeshop Barista Index</a>
+<p>Name: <%= @coffeeshop.name %></p>
+<p>Outdoor Seating: <%= @coffeeshop.outdoor_seating %></p>
+<p>Capacity: <%= @coffeeshop.capacity %></p>
+<p>Total Number of Baristas: <%= @coffeeshop.barista_count %></p>
+<a href="/coffeeshops/<%=@coffeeshop.id%>/edit">Edit</a>
+<%= link_to 'delete', "/coffeeshops/#{@coffeeshop.id}", method: :delete %>
+<a href="/coffeeshops/<%=@coffeeshop.id%>/baristas">Baristas</a>

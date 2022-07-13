@@ -1,4 +1,4 @@
 class Barista < ApplicationRecord
-   validates :name, :full_time, :hours_worked
-   belongs_to :theater
+   validates_presence_of :name, :hours_worked
+   belongs_to :coffeeshop
 end

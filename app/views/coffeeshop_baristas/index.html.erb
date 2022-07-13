@@ -1,0 +1,11 @@
+<h3><a href="/coffeeshops/<%= @coffeeshop.id%>/baristas/new">New barista</a></h3>
+
+<h1>baristas</h1>
+<h2 style="text-align:right;margin: 15px 15px 15px 15px;"><%= link_to 'Sort', "/coffeeshops/#{@coffeeshop.id}/baristas?alphabet=sort", method: :get %></h2>
+
+<% @baristas.each do |barista| %>
+	<div class="div"><h3><a href="/baristas/<%= barista.id%>"><%= barista.name%></a></h3>
+	<p>Full time?: <%= barista.full_time%></p>
+	<p>Hours Worked: <%= barista.hours_worked%></p>
+	<a href="/baristas/<%= barista.id %>/edit">Edit <%= barista.name  %></a></div>
+<% end %>

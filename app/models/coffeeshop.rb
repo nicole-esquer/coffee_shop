@@ -1,5 +1,5 @@
 class Coffeeshop < ApplicationRecord
-   validates :name, :capacity, :outdoor_seating
+   validates_presence_of :name, :capacity
    has_many :baristas
 
    def self.order_created_at_desc
@@ -12,5 +12,9 @@ class Coffeeshop < ApplicationRecord
 
    def sort_by_name
   	baristas.order("lower(name)")
+  end
+
+  def filter_by_hours_worked(hours_worked_filter)
+    baristas.where("hours_worked >= #{hours_worked_filter}")
   end
 end
