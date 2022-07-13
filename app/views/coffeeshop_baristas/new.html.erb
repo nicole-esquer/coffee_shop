@@ -1,0 +1,9 @@
+<form action="/coffeeshops/<%= @coffeeshop.id%>/baristas" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Enter a new barista:</p>
+  Name: <input type='text' name='barista[name]'/><br/>
+  Full time?<input type='checkbox' name='barista[full_time]'/><br/>
+  Hours Worked<input type='number' name='barista[hours_worked]'/><br/>
+  coffeeshop ID<input type='text' name='barista[coffeeshop_id]' value='<%= @coffeeshop.id %>'></input><br/>
+  <input type='submit' value="Create Barista"/>
+</form>
